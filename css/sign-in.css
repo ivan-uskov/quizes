@@ -1,0 +1,70 @@
+.sign_in_form_container
+{
+    padding-top: 40px;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.sign_in_form_container h3
+{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sign_in_form_container .field
+{
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.sign_in_form_container .field label
+{
+    display: inline-block;
+    width: 150px;
+}
+
+.sign_in_form_container .field span
+{
+
+}
+
+.sign_in_form_container .field input
+{
+    width: 220px;
+    display: inline-block;
+    padding: 5px 8px;
+    border: 1px solid #84898C;
+}
+
+.sign_in_form_container .field .error
+{
+    color: #eb0905;
+    position: absolute;
+    right: 10px;
+    bottom: 1px;
+    display: none;
+}
+
+.sign_in_form_container .submit
+{
+    width: 85px;
+    height: 30px;
+    display: inline-block;
+    left: 50%;
+    margin-left: -46.5px;
+    position: relative;
+    border-radius: 4px;
+    border: 1px solid #836C6C;
+    background: #84898C;
+}
+
+.sign_in_form_container .submit:hover
+{
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.sign_in_form_container .submit:active
+{
+    opacity: 0.4;
+}

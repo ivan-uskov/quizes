@@ -1,0 +1,25 @@
+.index_page_container
+{
+    margin: 50px 70px 0 70px;
+}
+
+.index_page_container ul
+{
+    width: 300px;
+    left: 50%;
+    position: relative;
+    margin-left: -150px;
+}
+
+.index_page_container h1
+{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.index_page_container h4
+{
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: -184px;
+}

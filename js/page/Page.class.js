@@ -1,0 +1,3 @@
+var Page = Base.extend({
+
+});
