@@ -45,7 +45,7 @@ var SignInPage = Page.extend({
         }
         else
         {
-            alert("User width this data not exists!");
+            alert("User with this data not exists!");
         }
     },
 

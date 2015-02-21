@@ -29,6 +29,11 @@ class Context
         session_start();
     }
 
+    public function getQuiz($userQuestionId)
+    {
+        return $this->database->getQuiz($userQuestionId);
+    }
+
     public function getQuestions()
     {
         return $this->database->getQuestions();

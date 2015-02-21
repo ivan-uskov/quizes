@@ -13,6 +13,7 @@
           <a href="/">Main</a>
           <a href="/sign-in.php" title="Sign In for quizes">Sign In</a>
           <a href="/quiz.php?random=1" title="Take a quiz">Random Quiz</a>
+          <a href="/profile.php" title="See profile">Profile</a>
         </div>
         <div class="user_box">
           <span>{$userEmail}</span>

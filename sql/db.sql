@@ -36,6 +36,22 @@ CREATE TABLE IF NOT EXISTS user
   PRIMARY KEY(user_id)
 );
 
+CREATE TABLE IF NOT EXISTS user_question
+(
+  user_question_id SERIAL,
+  user_id BIGINT UNSIGNED NOT NULL,
+  question_id BIGINT UNSIGNED NOT NULL,
+  answer_id BIGINT UNSIGNED NULL,
+  FOREIGN KEY (user_id) REFERENCES user(user_id) ON DELETE CASCADE,
+  FOREIGN KEY (question_id) REFERENCES question(question_id) ON DELETE CASCADE,
+  PRIMARY KEY(user_id)
+);
+
+INSERT INTO user_question
+SET
+  user_id = 1,
+  question_id = 1;
+
 INSERT INTO user
 SET
   email  = 'ivan.uskov@cpslabs.net',

@@ -14,15 +14,15 @@ class Database
         }
         catch (PDOException $e)
         {
-            Logger::logException(Config::SITE_ROOT, $e);
+            Logger::logException(self::LOG_FILE_NAME, $e);
             throw new RuntimeException();
         }
     }
 
-    public function getQuestions()
+    public function getQuestions($con = '')
     {
         $questions = array();
-        $sql = 'SELECT * FROM question' . '';
+        $sql = 'SELECT * FROM question ' . $con;
         foreach ($this->pdoConn->query($sql) as $row)
         {
             if (!empty($row))
@@ -34,6 +34,27 @@ class Database
             }
         }
         return $questions;
+    }
+
+    public function  getQuiz($userQuestionId)
+    {
+        $sql = 'SELECT * FROM user_question WHERE user_question_id = ' . $userQuestionId;
+
+        /* @var $userQuestion UserQuestion */
+        $userQuestion = null;
+        foreach ($this->pdoConn->query($sql) as $userQuestion) break;
+        if (empty($userQuestion))
+        {
+            throw new Exception('UserQuestion not exists!');
+        }
+        $userQuestion = new UserQuestion($userQuestion);
+        $question = $this->getQuestions('WHERE question_id = ' . $userQuestion->getQuestionId())[0];
+        if (empty($question))
+        {
+            throw new Exception('Question not exists!');
+        }
+
+        return new Quiz($question, $userQuestion);
     }
 
     private function getAnswers($questionId)
@@ -69,7 +90,6 @@ class Database
 
     public function getUser($email, $password)
     {
-
         $user = null;
         $sql = 'SELECT * FROM user WHERE email = ' . $this->escape($email) . ' && password = ' . $this->escape(md5($password));
 
@@ -83,6 +103,11 @@ class Database
         }
 
         return $user;
+    }
+
+    public function getStudentQuizes()
+    {
+
     }
 
     private function escape($str)

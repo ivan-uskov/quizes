@@ -1,0 +1,34 @@
+.profile_container
+{
+    padding: 40px;
+}
+
+.profile_container .navigation
+{
+    float: left;
+    width: 150px;
+    border-right: 1.5px solid #bebebe;
+}
+
+.profile_container .navigation a
+{
+    display: block;
+    margin-bottom: 11px;
+}
+
+.profile_container .content
+{
+    float: left;
+    padding-left: 100px;
+}
+
+.profile_container .content .info_block p
+{
+    margin-bottom: 11px;
+}
+
+.profile_container .content .info_block p span
+{
+    display: inline-block;
+    width: 100px;
+}

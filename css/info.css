@@ -1,0 +1,11 @@
+.info_container
+{
+    padding-top: 100px;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.info_container h4
+{
+    margin-bottom: 40px;
+}

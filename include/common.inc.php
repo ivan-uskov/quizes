@@ -8,18 +8,25 @@
     require_once( 'common/RequestMethod.class.php' );
     require_once( 'common/TemplateUtils.class.php' );
     require_once( 'common/UrlUtils.class.php' );
+    require_once( 'common/StringUtils.class.php' );
     require_once( 'common/Session.class.php' );
     require_once( 'common/Secure.class.php' );
 
     require_once( 'quiz/BaseQuestion.class.php' );
     require_once( 'quiz/BaseAnswer.class.php' );
+    require_once( 'quiz/BaseUserQuestion.class.php' );
+    require_once( 'quiz/UserQuestion.class.php' );
     require_once( 'quiz/Question.class.php' );
     require_once( 'quiz/Answer.class.php' );
+    require_once( 'quiz/Quiz.class.php' );
+
 
     require_once( 'page/Page.class.php' );
     require_once( 'page/IndexPage.class.php' );
     require_once( 'page/QuizPage.class.php' );
     require_once( 'page/SignInPage.class.php' );
+    require_once( 'page/ProfilePage.class.php' );
+    require_once( 'page/InfoPage.class.php' );
 
     require_once( 'user/UserStatus.class.php' );
     require_once( 'user/BaseUser.class.php' );

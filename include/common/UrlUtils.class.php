@@ -3,6 +3,7 @@
 class UrlUtils
 {
     const SIGN_IN_URL = 'sign-in.php';
+    const INDEX = 'index.php';
 
     public static function redirect($url)
     {

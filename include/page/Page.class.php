@@ -62,7 +62,7 @@ abstract class Page
 
         $pageVars = array
         (
-            TemplateUtils::USER_VAR_NAME  => $user ? ucwords($user->getName()) : TemplateUtils::ANONYMOUS_USER_TEXT,
+            TemplateUtils::USER_VAR_NAME  => $user ? StringUtils::camelCase($user->getName()) : TemplateUtils::ANONYMOUS_USER_TEXT,
             TemplateUtils::TITLE_VAR_NAME => $this->title,
             TemplateUtils::CSS_VAR_NAME   => TemplateUtils::getCssString($this->styles),
             TemplateUtils::JS_VAR_NAME    => TemplateUtils::getJsString($this->scripts)
@@ -123,6 +123,11 @@ abstract class Page
     protected function setTplVars(array $tplVars)
     {
         $this->tplVars = $tplVars;
+    }
+
+    protected function addTplVar($key, $val)
+    {
+        $this->tplVars[$key] = $val;
     }
 
     protected function setTemplate($template)

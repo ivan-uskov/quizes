@@ -5,8 +5,6 @@ abstract class BaseAnswer
     protected $id;
     protected $body;
 
-    protected $answers;
-
     public function __construct($row)
     {
         $this->id = $row['answer_id'];
@@ -16,5 +14,10 @@ abstract class BaseAnswer
     public function getId()
     {
         return $this->id;
+    }
+
+    public function getDescription()
+    {
+        return $this->body;
     }
 }

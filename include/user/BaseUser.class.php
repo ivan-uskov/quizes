@@ -50,6 +50,11 @@ class BaseUser
         return $this->firstName;
     }
 
+    public function getLastName()
+    {
+        return $this->lastName;
+    }
+
     public function getId()
     {
         return $this->id;

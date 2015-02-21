@@ -15,4 +15,9 @@ class User extends BaseUser
         }
         return !empty($name) ? $name : $this->email;
     }
+
+    public function isStudent()
+    {
+        return $this->getStatus() == UserStatus::STUDENT;
+    }
 }

@@ -1,0 +1,6 @@
+<?
+
+class UserQuestion extends BaseUserQuestion
+{
+
+}

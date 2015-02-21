@@ -1,0 +1,35 @@
+.form_container
+{
+    padding-top: 40px;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.form_container h4
+{
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.form_container p
+{
+    margin-bottom: 15px;
+}
+.form_container input
+{
+    margin-bottom: 11px;
+}
+
+.form_container input.submit
+{
+    border-radius: 5px;
+    width: 100px;
+    height: 30px;
+    border: 1px solid #2f3539;
+}
+
+.form_container input.submit:hover
+{
+    cursor: pointer;
+}
+

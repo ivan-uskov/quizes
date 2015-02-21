@@ -4,7 +4,6 @@ class Config
 {
     // Database constants
     const DB_HOST         = 'LOCALHOST';
-    const DB_NAME         = 'people';
     const DB_USER         = 'root';
     const DB_PASS         = '1234';
     const DB_DSN          = 'mysql:host=localhost;dbname=quizes';
@@ -13,7 +12,7 @@ class Config
     // Other constants
     const NEW_LINE_CHAR = "\n";
 
-    const SITE_ROOT    = 'E:/ps/quizes/';
+    const SITE_ROOT    = 'D:/dev/quizes/';
     const FILE_DIR     = 'uploads/';
     const SCRIPTS_DIR  = 'include/';
     const STYLES_DIR   = '/css/';

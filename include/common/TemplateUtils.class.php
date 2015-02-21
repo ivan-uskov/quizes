@@ -15,7 +15,8 @@ class TemplateUtils
         if(file_exists($templatePath))
         {
             $tpl = file_get_contents($templatePath);
-            $tpl = preg_replace('/[{][$]([a-zA-Z]{0,30})[}]/e', 'isset($vars["$1"]) ? $vars["$1"] : ""', $tpl);
+            $tpl = preg_replace_callback('/[{][$]([a-zA-Z]{0,30})[}]/', function($matches) use ($vars)
+            {  return isset($vars[$matches[1]]) ? $vars[$matches[1]]: ""; }, $tpl);
         }
         return $tpl;
     }
